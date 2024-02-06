@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getCommentsByArticleId } from "../utils/utils";
 import styles from "./ViewComments.module.css";
+import ViewIndividualArticle from "../components/ViewIndividualArticle";
 
 export default function ViewComments() {
   const [allComments, setAllComments] = useState([]);
@@ -15,9 +16,10 @@ export default function ViewComments() {
   }, [article_id]);
   return (
     <>
-      <Link to={"/"}>
+      {/* <Link to={"/"}>
         <button>Home</button>
-      </Link>
+          </Link> */}
+          <ViewIndividualArticle/>
       <h2>Comments</h2>
       {allComments.map((comments) => {
         return (
