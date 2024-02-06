@@ -1,17 +1,18 @@
-import { useState } from "react";
-import ViewAll from "./components/ViewAll";
+import Home from "./components/ViewAll";
 import { Route, Routes } from "react-router-dom";
 import ViewAllResults from "./components/ViewAllResults";
-
-// import './App.css'
+import ViewIndividualArticle from "./components/ViewIndividualArticle";
 
 function App() {
   return (
     <>
-      <ViewAll />
-
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/articles" element={<ViewAllResults />} />
+        <Route
+          path="/articles/:article_id"
+          element={<ViewIndividualArticle />}
+        />
       </Routes>
     </>
   );

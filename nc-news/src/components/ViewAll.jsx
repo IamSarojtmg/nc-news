@@ -1,14 +1,18 @@
 import { Link } from "react-router-dom";
 
-export default function ViewAll() {
+export default function Home() {
   return (
-      <>
-          <div>
-              
-      <Link to={"/articles"}>
-        <button>View All</button>
-      </Link>
-          </div>
+    <>
+      <header>
+        <Link to={"/"}>
+          <button className="home-btn">Home</button>
+        </Link>
+        <Link to={"/articles"}>
+          <button>View All</button>
+        </Link>
+        <h1>Welcome to NC news</h1>
+</header>
+
     </>
   );
 }

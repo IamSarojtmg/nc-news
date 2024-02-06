@@ -1,24 +1,32 @@
 import { useEffect, useState } from "react";
 import { getAllArticles } from "../utils/utils";
-import ListAllArticles from "./ListAllArticles";
+import ListAllArticles from "../ListAllArticles/ListAllArticles";
+import { Link } from "react-router-dom";
 
 export default function ViewAllResults() {
-    const [isResult, setIsResult] = useState(false);
-    const [articlesResult, setArticlesResult] = useState([])
+  const [isResult, setIsResult] = useState(false);
+  const [articlesResult, setArticlesResult] = useState([]);
 
   useEffect(() => {
     getAllArticles().then((response) => {
       setIsResult(true);
-      setArticlesResult(response)
+      setArticlesResult(response);
     });
-  },[]);
+  }, []);
 
   if (isResult)
     return (
       <>
-            <section>
-                <ListAllArticles articlesResult={articlesResult} />
+        <div>
+          <Link to={"/"}>
+            <button>Home</button>
+          </Link>
+        </div>
+        <section>
+          <ListAllArticles articlesResult={articlesResult} />
         </section>
       </>
     );
 }
+
+// same as searchresult.jsx
