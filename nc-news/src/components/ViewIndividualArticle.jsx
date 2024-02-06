@@ -20,7 +20,6 @@ export default function ViewIndividualArticle() {
       </Link>
       <h2>{viewSingleArticle.title}</h2>
       <p>Author: {viewSingleArticle.author}</p>
-      <p>Article ID: {viewSingleArticle.article_id}</p>
       <p>Description: {viewSingleArticle.body}</p>
       <p>Topic: {viewSingleArticle.topic}</p>
       <p>
@@ -28,6 +27,9 @@ export default function ViewIndividualArticle() {
       </p>
       <p>Votes: {viewSingleArticle.votes}</p>
       <img src={viewSingleArticle.article_img_url} alt="" />
+      <div>
+      <Link to={`/articles/${viewSingleArticle.article_id}/comments`} ><button>View Comments</button></Link>
+      </div>
     </>
   );
 }
