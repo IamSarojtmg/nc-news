@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getArticleByID } from "../utils/utils";
+import ArticleCard from "./ArticleCards";
 
 export default function ViewIndividualArticle() {
-  const [viewSingleArticle, setViewSingleArticle] = useState([]);
+  const [viewSingleArticle, setViewSingleArticle] = useState({});
 
   const { article_id } = useParams();
 
@@ -15,21 +16,10 @@ export default function ViewIndividualArticle() {
 
   return (
     <>
-      <Link to={"/"}>
-        <button>Home</button>
-      </Link>
-      <h2>{viewSingleArticle.title}</h2>
-      <p>Author: {viewSingleArticle.author}</p>
-      <p>Description: {viewSingleArticle.body}</p>
-      <p>Topic: {viewSingleArticle.topic}</p>
-      <p>
-        Created At: {new Date(viewSingleArticle.created_at).toLocaleString()}
-      </p>
-      <p>Votes: {viewSingleArticle.votes}</p>
-      <img src={viewSingleArticle.article_img_url} alt="" />
-      <div>
-      <Link to={`/articles/${viewSingleArticle.article_id}/comments`} ><button>View Comments</button></Link>
-      </div>
+      <ArticleCard
+        article_id={article_id}
+        viewSingleArticle={viewSingleArticle}
+      />
     </>
   );
 }
