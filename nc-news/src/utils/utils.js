@@ -27,3 +27,11 @@ export const voteArticle = (article_id, votesCount) => {
     return res.data;
   });
 };
+
+export const postComment = (article_id, comment) => {
+  return ncNewsAPI
+    .post(`/articles/${article_id}/comments`, comment)
+    .then((res) => {
+      return res.data;
+    });
+};
