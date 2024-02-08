@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { voteArticle } from "../utils/utils";
+import PostComment from "./postComment";
 
 export default function ArticleCard({ article_id, viewSingleArticle }) {
   const [votesCount, setVotesCount] = useState(0);
@@ -55,6 +56,8 @@ export default function ArticleCard({ article_id, viewSingleArticle }) {
           <Link to={`/articles/${viewSingleArticle.article_id}/comments`}>
             <button>View Comments</button>
           </Link>
+
+          <PostComment article_id={article_id} />
         </div>
       </section>
     </>

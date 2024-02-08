@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import ViewAllResults from "./components/ViewAllResults";
 import ViewIndividualArticle from "./components/ViewIndividualArticle";
 import ViewComments from "./comments/ViewComments";
+import PostComment from "./components/postComment";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
           path="/articles/:article_id"
           element={<ViewIndividualArticle />}
         />
-        <Route path="/articles/:article_id/comments" element={<ViewComments/> } />
+        <Route path="/articles/:article_id/comments" element={<ViewComments />} />
       </Routes>
     </>
   );

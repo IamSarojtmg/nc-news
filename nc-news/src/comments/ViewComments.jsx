@@ -16,9 +16,6 @@ export default function ViewComments() {
   }, [article_id]);
   return (
     <>
-      {/* <Link to={"/"}>
-        <button>Home</button>
-          </Link> */}
           <ViewIndividualArticle/>
       <h2>Comments</h2>
       {allComments.map((comments) => {
