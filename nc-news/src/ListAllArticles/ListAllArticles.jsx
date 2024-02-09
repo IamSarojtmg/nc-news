@@ -5,6 +5,7 @@ export default function ListAllArticles({ articlesResult }) {
   return (
     <>
       {articlesResult.article.map((articles) => {
+
         return (
           <div className={styles.cards} key={articles.article_id}>
             <p>Author: {articles.author}</p>
