@@ -3,16 +3,22 @@ import { getAllArticles } from "../utils/utils";
 import ListAllArticles from "../ListAllArticles/ListAllArticles";
 import { Link } from "react-router-dom";
 
-export default function ViewAllResults() {
+export default function ViewAllResults({marketPlaceSearchResults,setMarketPlaceSearchResults,searchParams}) {
   const [isResult, setIsResult] = useState(false);
   const [articlesResult, setArticlesResult] = useState([]);
 
   useEffect(() => {
-    getAllArticles().then((response) => {
+    const slug = searchParams.get('topic')
+
+    getAllArticles(slug).then((response) => {
+
       setIsResult(true);
       setArticlesResult(response);
     });
-  }, []);
+  }, [searchParams]);
+
+
+
 
   if (isResult)
     return (

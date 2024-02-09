@@ -4,8 +4,14 @@ const ncNewsAPI = axios.create({
   baseURL: "https://backend-project-vpy0.onrender.com/api",
 });
 
-export const getAllArticles = () => {
-  return ncNewsAPI.get("/articles").then((response) => {
+export const getAllArticles = (slug) => {
+  let url = null;
+  if (slug) {
+    url = `/articles/${slug}`;
+  } else {
+    url = "/articles";
+  }
+  return ncNewsAPI.get(url).then((response) => {
     return response.data;
   });
 };
@@ -34,4 +40,10 @@ export const postComment = (article_id, comment) => {
     .then((res) => {
       return res.data;
     });
+};
+
+export const getCategories = () => {
+  return ncNewsAPI.get("/topics").then((res) => {
+    return res.data;
+  });
 };
