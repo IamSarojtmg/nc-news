@@ -1,0 +1,27 @@
+.cont{
+    display: flex;
+height: 50px;
+justify-content: center;
+gap: 20%;
+text-decoration: none;
+margin-bottom: 20px;
+}
+
+.nav{
+border: none;
+    border-radius: 10%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    width: 100px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav:hover{
+    background-color: #eb1b24; /* Hover background color */
+    color: black; /* Hover text color */
+}

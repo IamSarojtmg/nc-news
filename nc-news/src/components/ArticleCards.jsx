@@ -3,14 +3,28 @@ import { Link } from "react-router-dom";
 import { voteArticle } from "../utils/utils";
 import PostComment from "./postComment";
 
-export default function ArticleCard({ article_id, viewSingleArticle }) {
+export default function ArticleCard({ article_id, viewSingleArticle,isLoading }) {
   const [votesCount, setVotesCount] = useState(0);
   const [error, setError] = useState("");
+
+  if (isLoading) {
+    return <div>...loading</div>
+  }
+  
   return (
     <>
-      <Link to={"/"}>
-        <button>Home</button>
-      </Link>
+      {/* <div>
+        {isLoading?<p>...Loading</p>:null}
+      </div> */}
+      <header className="cont">
+        <Link to={"/"}>
+          <button className="nav">Home</button>
+        </Link>
+        <Link to={"/articles"}>
+          <button className="nav">View All</button>
+        </Link>
+        <Link to={"/topics"}><button className="nav">Categories</button></Link>
+</header>
       <h2>{viewSingleArticle.title}</h2>
       <section>
         <p>Author: {viewSingleArticle.author}</p>
