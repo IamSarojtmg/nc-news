@@ -6,17 +6,12 @@ import ViewComments from "./comments/ViewComments";
 // import SearchItemForm from "./components/SearchItemForm";
 import { useState } from "react";
 import Categories from "../categories/categories";
-// FIND A WAY TO MOVE THE THREE CATEGORIES INTO ANOTHER PAGE(/TOPICS)
 function App() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [marketPlaceSearchResults, setMarketPlaceSearchResults] = useState([]); // can be in child component?
 
   return (
     <>
-      {/* <SearchItemForm
-        searchParams={searchParams}
-        setSearchParams={setSearchParams}
-      /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
