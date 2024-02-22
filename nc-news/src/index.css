@@ -1,14 +1,14 @@
-.cont{
+.cont {
     display: flex;
-height: 50px;
-justify-content: center;
-gap: 20%;
-text-decoration: none;
-margin-bottom: 20px;
+    height: 50px;
+    justify-content: center;
+    gap: 20%;
+    text-decoration: none;
+    margin-bottom: 20px;
 }
 
-.nav{
-border: none;
+.nav {
+    border: none;
     border-radius: 10%;
     height: 100%;
     margin: 0;
@@ -21,7 +21,33 @@ border: none;
     box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
-.nav:hover{
-    background-color: #eb1b24; /* Hover background color */
-    color: black; /* Hover text color */
+.nav:hover {
+    background-color: #eb1b24;
+    /* Hover background color */
+    color: black;
+    /* Hover text color */
 }
+
+body {
+    background-color: #10605a;
+}
+
+/* @media all and (max-width:450px) {
+    body {
+        background-color: goldenrod;
+    }
+
+    .cont {
+        width: 100%;
+        border: solid;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+
+
+    .nav {
+        width: 50px;
+content: 'hi';
+    }
+} */
