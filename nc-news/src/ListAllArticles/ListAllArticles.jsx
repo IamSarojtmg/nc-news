@@ -5,16 +5,18 @@ export default function ListAllArticles({ articlesResult }) {
   return (
     <>
       {articlesResult.article.map((articles) => {
-
+        console.log(articles);
         return (
-          <div className={styles.cards} key={articles.article_id}>
+          <section className={styles.cards} key={articles.article_id}>
             <p>Author: {articles.author}</p>
             <p>Title:{articles.title}</p>
+            <img src={articles.article_img_url} ></img>
             <p>Topic: {articles.topic}</p>
+            <p> ❤️ {articles.votes}</p>
             <Link to={`/articles/${articles.article_id}`}>
               <button>Read article</button>
             </Link>
-          </div>
+          </section>
         );
       })}
     </>

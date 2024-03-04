@@ -1,4 +1,4 @@
-import Home from "./components/ViewAll";
+import Home from "./components/Home";
 import { Route, Routes, useSearchParams } from "react-router-dom";
 import ViewAllResults from "./components/ViewAllResults";
 import ViewIndividualArticle from "./components/ViewIndividualArticle";
