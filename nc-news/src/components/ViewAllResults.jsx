@@ -24,15 +24,8 @@ export default function ViewAllResults({ searchParams }) {
   if (isResult)
     return (
       <>
-        <div className="cont">
-          <Link to={"/"}>
-            <button className="nav">Home</button>
-          </Link>
-          <Link to={'/articles'}><button className="nav">View All</button></Link>
-          <Link to={"/topics"}><button className="nav">Categories</button></Link>
-        </div>
+
         <section>
-          {/* {loading?<div>Loading</div>: null} */}
           <ListAllArticles articlesResult={articlesResult} />
         </section>
       </>
