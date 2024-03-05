@@ -1,24 +1,29 @@
 import { Link } from "react-router-dom";
-import styles from './listAllArticles.module.css'
+import styles from "./listAllArticles.module.css";
 
 export default function ListAllArticles({ articlesResult }) {
   return (
-    <>
-      {articlesResult.article.map((articles) => {
-        console.log(articles);
-        return (
-          <section className={styles.cards} key={articles.article_id}>
-            <p>Author: {articles.author}</p>
-            <p>Title:{articles.title}</p>
-            <img src={articles.article_img_url} ></img>
-            <p>Topic: {articles.topic}</p>
-            <p> ❤️ {articles.votes}</p>
-            <Link to={`/articles/${articles.article_id}`}>
-              <button>Read article</button>
+    <main className={styles.mainCont}>
+      <section className={styles.gridCont}>
+        {articlesResult.article.map((articles) => {
+          return (
+            <Link
+              className={styles.links}
+              to={`/articles/${articles.article_id}`}
+            >
+              <section className={styles.cards} key={articles.article_id}>
+                <h3>{articles.author}</h3>
+                <h2>{articles.title}</h2>
+                <img src={articles.article_img_url}></img>
+                <div className={styles.footer}>
+                  <p> {articles.topic}</p>
+                  <p> ❤️ {articles.votes}</p>
+                </div>
+              </section>
             </Link>
-          </section>
-        );
-      })}
-    </>
+          );
+        })}
+      </section>
+    </main>
   );
 }

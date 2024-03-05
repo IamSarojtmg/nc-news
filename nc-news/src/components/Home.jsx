@@ -9,7 +9,7 @@ export default function Home() {
       <nav>
         <header>
           <div className="logo">
-            <h1>NorthCoders</h1>
+            <h1>Northern</h1>
             <h2>News</h2>
           </div>
           <ul>
