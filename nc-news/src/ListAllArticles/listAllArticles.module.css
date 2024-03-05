@@ -1,6 +1,51 @@
-.cards{
-    border: solid black;
-    width: 50%;
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.mainCont {
+    display: flex;
+    justify-content: center;
+}
+
+.gridCont {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    width: 80%;
+    gap: 1%;
+    height: 500px;
+}
+
+.cards {
+    background-color: gainsboro;
+    border-radius: 5px;
+    font-family: Kanit;
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    padding: 0 10px 0 10px;
+}
+
+.links {
+    text-decoration: none;
+    color: inherit;
+}
+
+.cards:hover{
+    background-color: rgb(186, 186, 186);
+}
+
+.cards > h3{
+    color: #eb1b24;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px 0 5px;
+}
+
+.footer :first-child{
+    background-color: #eb1b24;
+    padding: 5px;
     border-radius: 10px;
-    margin-bottom: 20px;
 }
