@@ -3,6 +3,7 @@
 .mainCont {
     display: flex;
     justify-content: center;
+    border: solid pink;
 }
 
 .gridCont {

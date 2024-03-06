@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getArticleByID } from "../utils/utils";
-import ArticleCard from "./ArticleCards";
+import ArticleCard from "../../article-cards/ArticleCards";
 
 export default function ViewIndividualArticle() {
   const [viewSingleArticle, setViewSingleArticle] = useState({});

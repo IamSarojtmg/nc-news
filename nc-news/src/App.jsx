@@ -6,12 +6,13 @@ import ViewComments from "./comments/ViewComments";
 // import SearchItemForm from "./components/SearchItemForm";
 import { useState } from "react";
 import Categories from "../categories/categories";
+import Nav from "./components/Nav";
 function App() {
-  const [searchParams, setSearchParams] = useSearchParams();
-  const [marketPlaceSearchResults, setMarketPlaceSearchResults] = useState([]); // can be in child component?
+  const [searchParams, setSearchParams] = useSearchParams();//dont need it here? its not being used other than passing to
 
   return (
     <>
+      <Nav/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route

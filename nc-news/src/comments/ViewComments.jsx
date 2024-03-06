@@ -16,17 +16,22 @@ export default function ViewComments() {
   }, [article_id]);
   return (
     <>
-          <ViewIndividualArticle/>
+      <ViewIndividualArticle />
+      <section className={styles.commentsCont}>
+        <div className={styles.cont}>
+          
       <h2>Comments</h2>
       {allComments.map((comments) => {
         return (
           <div className={styles.comments} key={comments.comment_id}>
-            <p>Author: {comments.author}</p>
-            <p>Comment : {comments.body}</p>
+            <p>{comments.author}</p>
+            <p>{comments.body}</p>
             <p>Votes: {comments.votes}</p>
           </div>
         );
       })}
+      </div>
+      </section>
     </>
   );
 }
