@@ -52,10 +52,18 @@ nav ul li {
 .links {
     text-decoration: none;
     color: inherit;
-
 }
 
+.links-2{
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
 
 nav ul li:hover {
+    color: black;
+}
+
+.links-2:hover{
     color: black;
 }

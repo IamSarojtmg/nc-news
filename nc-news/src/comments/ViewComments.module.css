@@ -1,6 +1,18 @@
+.commentsCont{
+    display: flex;
+    justify-content: center;
+    /* border: solid blue; */
+    font-family: Kanit;
+}
+
+
+.cont{
+    width: 60%;
+}
+
 .comments{
-    border: solid black;
-    width: 50%;
+    background-color: gainsboro;
+    /* width: 50%; */
     border-radius: 10px;
     margin-bottom: 20px;
 }
