@@ -36,3 +36,9 @@
 .postAndView{
    border: solid;
 }
+
+@media all and (max-width:500px){
+    .cont{
+        width: 80%;
+    }
+}

@@ -49,3 +49,16 @@
     padding: 5px;
     border-radius: 10px;
 }
+
+@media all and (max-width:500px){
+
+.gridCont{
+    display: flex;
+    width: 95%;
+    flex-direction: column;
+}
+
+   .cards{
+    height: auto;
+   } 
+}

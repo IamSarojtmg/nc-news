@@ -14,11 +14,12 @@ nav {
     font-family: Kanit;
 }
 
-header {
+.nav-cont {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 80%;
+    gap: 10%;
 }
 
 .logo {
@@ -39,6 +40,7 @@ nav ul {
     display: flex;
     gap: 1rem;
     font-size: xx-large;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -66,4 +68,19 @@ nav ul li:hover {
 
 .links-2:hover{
     color: black;
+}
+
+@media all and (max-width:500px){
+
+
+    .nav-cont {
+display: flex;
+flex-wrap: wrap;
+
+    }
+
+    .links-cont{
+        display: flex;
+        flex-wrap: wrap;
+    }
 }

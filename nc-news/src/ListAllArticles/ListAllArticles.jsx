@@ -14,7 +14,7 @@ export default function ListAllArticles({ articlesResult }) {
               <section className={styles.cards} key={articles.article_id}>
                 <h3>{articles.author}</h3>
                 <h2>{articles.title}</h2>
-                <img src={articles.article_img_url}></img>
+                <img className={styles.image} src={articles.article_img_url}></img>
                 <div className={styles.footer}>
                   <p> {articles.topic}</p>
                   <p> ❤️ {articles.votes}</p>
